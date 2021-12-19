@@ -3,10 +3,9 @@ RUN apt-get -y update && apt-get install -y
 RUN apt-get -y install clang
 COPY . /usr/src/solution
 WORKDIR /usr/src/solution
-RUN clang++ -O3 -o ./01/program01 ./01/main.cpp
+RUN ./build.sh
 
 FROM ubuntu:latest
-COPY --from=build ./usr/src/solution/01/program01 ./01/
-COPY --from=build ./usr/src/solution/01/input.txt ./01/
-WORKDIR ./01/
-ENTRYPOINT ["./program01"]
+COPY --from=build ./usr/src/solution/release/ ./release/
+WORKDIR ./release
+ENTRYPOINT ["./run.sh"]
