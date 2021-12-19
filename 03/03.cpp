@@ -87,6 +87,8 @@ int main()
 
     // TODO: seconds solution is not correct
 
+    // proovime veel korra CI
+
     printf("%i\n", gamma * epsilon); // 3895776
     printf("%i\n", oxygen * co2); // 7928162   
 
