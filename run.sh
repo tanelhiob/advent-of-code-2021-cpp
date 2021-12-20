@@ -6,6 +6,12 @@ do
 	if test -f $app; then
 		cd $i
 
+		echo warmup $app
+		./program$i
+		./program$i
+		./program$i
+		./program$i
+
 		echo executing $app		
 		./program$i
 		
