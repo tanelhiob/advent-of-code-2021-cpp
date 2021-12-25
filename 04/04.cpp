@@ -130,7 +130,7 @@ int main()
 
 
     printf("%i\n", fastestBoard[1]); // 32844
-    printf("%i\n", slowestBoard[1]); // 32844
+    printf("%i\n", slowestBoard[1]); // 4920
 
     uint64_t timer_end = micros();
     uint64_t timer_diff = timer_end - timer_start;
